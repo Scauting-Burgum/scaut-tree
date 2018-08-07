@@ -25,12 +25,41 @@ root = Node([
 ])
 ```
 
+The resulting tree looks like this;
+```
+Node
+|-Node
+|-Node
+||-Node
+||-Node
+||-Node
+```
+
+### Adding a node to a tree
+```python
+from common import Node
+
+root = Node([
+    Node(), 
+    Node([
+        Node(), Node(), Node()
+    ])
+])
+
+root.add(Node(
+[Node(), Node()]
+))
+```
+
 This resulting tree looks like this;
 ```
 Node
 |-Node
 |-Node
 ||-Node
+||-Node
+||-Node
+|-Node
 ||-Node
 ||-Node
 ```
